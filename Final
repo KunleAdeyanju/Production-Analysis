@@ -1,3 +1,50 @@
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/kunleade/.zprofile
+1.
 
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+
+2. 
+SELECT COUNT(*)
+FROM cheese_production cp JOIN state_lookup sl 
+	On cp.State_ANSI = sl.State_ANSI 
+WHERE cp.Value > 1000000 AND cp."Year" = 2023 AND cp.Period ='APR'
+GROUP BY cp.State_ANSI 
+
+
+
+
+SELECT sl.State, cp.Value 
+FROM cheese_production cp JOIN state_lookup sl 
+	ON cp.State_ANSI = sl.State_ANSI 
+WHERE cp."Year" = 2023 AND cp.Period = "APR"
+
+
+/*
+
+Can you find the total yogurt production for states in the year 2022 which 
+also have cheese production data from 2023? This will help the Dairy Division in their planning.
+
+*/
+
+SELECT SUM(Value)
+FROM yogurt_production yp 
+WHERE State_ANSI IN (
+	SELECT State_ANSI
+	FROM cheese_production cp
+	WHERE "Year" = 2023 AND Value > 0
+	)
+	AND "Year" = 2022
+
+
+SELECT COUNT(State) 
+FROM state_lookup sl 
+WHERE State_ANSI  NOT IN (
+SELECT State_ANSI 
+FROM milk_production mp
+WHERE "Year" = 2023
+Group BY State_ANSI
+)
+
+
+SELECT sl.State, cp.Value 
+FROM cheese_production cp LEFT JOIN state_lookup sl 
+	ON cp.State_ANSI = sl.State_ANSI 
+WHERE cp."Year" = 2023 AND cp.Period = "APR"
