@@ -4,9 +4,9 @@ import sqlite3
 import pandas as pd
 
 # --- CONFIG ---
-csv_folder = "path/to/csv_folder"           # folder containing CSV files
-output_folder = "path/to/output_folder"     # folder to save the .db file
-db_name = "combined_data.db"                # name of the SQLite database file
+csv_folder = "./data_files"           # folder containing CSV files
+output_folder = "./database"     # folder to save the .db file
+db_name = "production.db"                # name of the SQLite database file
 # --------------
 
 # Make sure the output folder exists
