@@ -14,60 +14,61 @@ db_name = "production.db"                # name of the SQLite database file
 # Define the desired SQL data types for columns in specific tables.
 # Keys are the SANITIZED table names. Values are dictionaries
 # mapping column names to SQLAlchemy types.
+# --- DATA TYPE SCHEMA (Using simple strings for sqlite3) ---
 SCHEMA_CONFIG = {
     'cheese_production': {
-        'Year': types.Integer(),
-        'Period': types.TEXT(),
-        'Geo_Level': types.TEXT(),
-        'State_ANSI': types.INTEGER(), # Note: INTEGER is a synonym for Integer
-        'Commodity_ID': types.INTEGER(), # Corrected typo from Comodity_ID
-        'Domain': types.TEXT(),
-        'Value': types.INTEGER()
+        'Year': 'INTEGER',
+        'Period': 'TEXT',
+        'Geo_Level': 'TEXT',
+        'State_ANSI': 'INTEGER',
+        'Commodity_ID': 'INTEGER', # I corrected the typo from 'Comodity_ID'
+        'Domain': 'TEXT',
+        'Value': 'INTEGER'
     },
     'coffe_production': {
-        'Year': types.Integer(),
-        'Period': types.TEXT(),
-        'Geo_Level': types.TEXT(),
-        'State_ANSI': types.INTEGER(),
-        'Commodity_ID': types.INTEGER(),
-        'Value': types.INTEGER()
+        'Year': 'INTEGER',
+        'Period': 'TEXT',
+        'Geo_Level': 'TEXT',
+        'State_ANSI': 'INTEGER',
+        'Commodity_ID': 'INTEGER',
+        'Value': 'INTEGER'
     },
     'egg_production':{
-        'Year': types.Integer(),
-        'Period': types.TEXT(),
-        'Geo_Level': types.TEXT(),
-        'State_ANSI': types.INTEGER(),
-        'Commodity_ID': types.INTEGER(),
-        'Value': types.INTEGER()
+        'Year': 'INTEGER',
+        'Period': 'TEXT',
+        'Geo_Level': 'TEXT',
+        'State_ANSI': 'INTEGER',
+        'Commodity_ID': 'INTEGER',
+        'Value': 'INTEGER'
     },
     'honey_production':{
-        'Year': types.Integer(),
-        'Geo_Level': types.TEXT(),
-        'State_ANSI': types.INTEGER(),
-        'Commodity_ID': types.INTEGER(),
-        'Value': types.INTEGER()
+        'Year': 'INTEGER',
+        'Geo_Level': 'TEXT',
+        'State_ANSI': 'INTEGER',
+        'Commodity_ID': 'INTEGER',
+        'Value': 'INTEGER'
     },
     'milk_production': {
-        'Year': types.Integer(),
-        'Period': types.TEXT(),
-        'Geo_Level': types.TEXT(),
-        'State_ANSI': types.INTEGER(),
-        'Commodity_ID': types.INTEGER(),
-        'Domain': types.TEXT(),
-        'Value': types.INTEGER()
+        'Year': 'INTEGER',
+        'Period': 'TEXT',
+        'Geo_Level': 'TEXT',
+        'State_ANSI': 'INTEGER',
+        'Commodity_ID': 'INTEGER',
+        'Domain': 'TEXT',
+        'Value': 'INTEGER'
     },
     'state_lookup':{
-        'State': types.TEXT(),
-        'State_ANSI': types.INTEGER()
+        'State': 'TEXT',
+        'State_ANSI': 'INTEGER'
     },
     'yogurt_production': {
-        'Year': types.Integer(),
-        'Period': types.TEXT(),
-        'Geo_Level': types.TEXT(),
-        'State_ANSI': types.INTEGER(),
-        'Commodity_ID': types.INTEGER(),
-        'Domain': types.TEXT(),
-        'Value': types.INTEGER()
+        'Year': 'INTEGER',
+        'Period': 'TEXT',
+        'Geo_Level': 'TEXT',
+        'State_ANSI': 'INTEGER',
+        'Commodity_ID': 'INTEGER',
+        'Domain': 'TEXT',
+        'Value': 'INTEGER'
     }
 }
 
