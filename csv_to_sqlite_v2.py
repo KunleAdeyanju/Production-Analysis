@@ -16,64 +16,60 @@ db_name = "production.db"                # name of the SQLite database file
 # mapping column names to SQLAlchemy types.
 SCHEMA_CONFIG = {
     'cheese_production': {
-        'Year': types.INTEGER,
-        'Period': types.TEXT,
-        'Geo_Level': types.TEXT,
-        'State_ANSI': types.INTEGER,
-        'Comodity_ID': types.INTEGER,          
-        'Domain': types.TEXT,
-        'Value': types.INTEGER
+        'Year': types.Integer(),
+        'Period': types.TEXT(),
+        'Geo_Level': types.TEXT(),
+        'State_ANSI': types.INTEGER(), # Note: INTEGER is a synonym for Integer
+        'Commodity_ID': types.INTEGER(), # Corrected typo from Comodity_ID
+        'Domain': types.TEXT(),
+        'Value': types.INTEGER()
     },
     'coffe_production': {
-        'Year': types.INTEGER,
-        'Period': types.TEXT,
-        'Geo_Level': types.TEXT,
-        'State_ANSI': types.INTEGER,
-        'Comodity_ID': types.INTEGER,          
-        'Value': types.INTEGER
+        'Year': types.Integer(),
+        'Period': types.TEXT(),
+        'Geo_Level': types.TEXT(),
+        'State_ANSI': types.INTEGER(),
+        'Commodity_ID': types.INTEGER(),
+        'Value': types.INTEGER()
     },
     'egg_production':{
-        'Year': types.INTEGER,
-        'Period': types.TEXT,
-        'Geo_Level': types.TEXT,
-        'State_ANSI': types.INTEGER,
-        'Comodity_ID': types.INTEGER,          
-        'Value': types.INTEGER
+        'Year': types.Integer(),
+        'Period': types.TEXT(),
+        'Geo_Level': types.TEXT(),
+        'State_ANSI': types.INTEGER(),
+        'Commodity_ID': types.INTEGER(),
+        'Value': types.INTEGER()
     },
     'honey_production':{
-        'Year': types.INTEGER,
-        'Geo_Level': types.TEXT,
-        'State_ANSI': types.INTEGER,
-        'Comodity_ID': types.INTEGER,          
-        'Value': types.INTEGER
+        'Year': types.Integer(),
+        'Geo_Level': types.TEXT(),
+        'State_ANSI': types.INTEGER(),
+        'Commodity_ID': types.INTEGER(),
+        'Value': types.INTEGER()
     },
     'milk_production': {
-        'Year': types.INTEGER,
-        'Period': types.TEXT,
-        'Geo_Level': types.TEXT,
-        'State_ANSI': types.INTEGER,
-        'Comodity_ID': types.INTEGER,          
-        'Domain': types.TEXT,
-        'Value': types.INTEGER
+        'Year': types.Integer(),
+        'Period': types.TEXT(),
+        'Geo_Level': types.TEXT(),
+        'State_ANSI': types.INTEGER(),
+        'Commodity_ID': types.INTEGER(),
+        'Domain': types.TEXT(),
+        'Value': types.INTEGER()
     },
     'state_lookup':{
-        'State': types.TEXT,
-        'State_ANSI': types.INTEGER
-    },,
+        'State': types.TEXT(),
+        'State_ANSI': types.INTEGER()
+    },
     'yogurt_production': {
-        'Year': types.INTEGER,
-        'Period': types.TEXT,
-        'Geo_Level': types.TEXT,
-        'State_ANSI': types.INTEGER,
-        'Comodity_ID': types.INTEGER,          
-        'Domain': types.TEXT,
-        'Value': types.INTEGER
+        'Year': types.Integer(),
+        'Period': types.TEXT(),
+        'Geo_Level': types.TEXT(),
+        'State_ANSI': types.INTEGER(),
+        'Commodity_ID': types.INTEGER(),
+        'Domain': types.TEXT(),
+        'Value': types.INTEGER()
     }
-
-    # Add other table schemas here...
-    # 'my_other_table': { 'column_x': types.TEXT, ... }
 }
-# -------------------------------------------------------------
 
 # Make sure the output folder exists
 os.makedirs(output_folder, exist_ok=True)
